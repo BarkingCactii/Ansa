@@ -1,0 +1,861 @@
+SRA  TRAIN  CONTROL  COMMAND  COMMUNICATION  SYSTEM
+
+
+SYSTEM MANAGEMENT TERMINAL
+
+USER MANUAL
+
+
+
+          x.   INTRODUCTION
+          x.1. Overview
+          x.2. Database Actions
+
+          y.   OPERATION
+          y.1. General
+          y.2. Main Menu
+          y.3. Database Menu
+          y.4. Database Screens
+          y.5. Manipulating Records in the Database
+          y.6. Moving within a Database Screen
+          y.7. Selection Lists
+          y.8. Field and Screen Validation
+          y.9. Downloading the Configuration
+          y.10.     Getting Help
+          y.11.     Passwords
+          y.12.     Data Relationships
+
+          z.   APPENDIX
+          z.1  Database Status
+          z.2  Error Messages
+
+x.   INTRODUCTION
+
+     This documentation describes the database portion of the
+SMT, which include the functions when Database Maintenance is
+choosen from the Main Menu.
+
+x.1. Overview
+
+The System Management Terminal  (SMT) provides a means of
+controllong information used by the command terminals (CT's).
+
+This information is stored locally in a database, which is then
+downloaded to all command terminal when required.  The SMT
+provides a number of screens which allow the user to view, add,
+modify or delete records contained in the database. Each screen
+pertains to a certain functional data type or relation used by
+each command terminal.
+
+
+x.2. Database Actions
+
+All operations which perform an action in the database are
+accessed by the row of boxes at the bottom of the screens shown
+below:
+
+(caption for box row here)
+
+These action boxes are shown at the bottom of each data entry
+screen.  The boxes that are applicable for a particular screen
+are highlighted; those that are not applicable at the time are
+dimmed.  The actions are:
+
+     Action         Function Key to press
+     Add                 F1
+     Modify              F2
+     Move                F3
+     Save                F4
+     Beginning           F5
+     Previous            F6
+     Next                F7
+     End                 F8
+     Delete              F9
+     Select Group        F10
+     View                F11
+     Alternate Add       F12
+
+These actions are explained in more detail elsewhere. In this
+documentation, you will be referred to as using keys to perform
+certain actions, such as the Add key. This literally means, press
+the F1 key on your keyboard.
+
+Note that the record displayed on screen is called the current
+record, and that all database actions which relate to a record
+refer to this current record. For example Modify, Add, Delete all
+act on the current record (the record on screen)..
+
+
+y.   OPERATION
+
+y.1. General
+
+Moving around within a screen and within the menus is
+accomplished by using the up, down, left and right cursor keys.
+The current cursor position will always be higlighted. Selecting
+an item in a menu is by moving the cursor to that item and
+pressing the enter key.
+
+
+y.2. Main Menu
+
+The Main Menu consists of the following headings:
+
+     Database Management
+     Command Terminal Maintenance
+     Help Overview
+     Return to Main Menu
+
+Use the up and down cursor keys to highlight the desired function
+and press the enter key to select the highlighted menu item.
+
+On selecting the 'Database Maintenance' menu option the user will
+be prompted to enter a higher level of password. The default
+password has been set to 'SMT DATA' and when entered will give
+the user access to the Database Management menu. Should an
+incorrect password be entered the SMT will revert back to the
+System Management menu.
+
+Note that CT Maintenance is discussed in the Fault Locating
+Manual, and is not described in this manual.
+
+
+2.3. Database Menu
+
+The Database Management Menu consists of the following choices:
+
+     Elementary Data
+     Controller Group Configuration
+     Line Assignment
+     System Configuration
+     Download Configuration
+     Regress to Passive Data
+
+     Elementary Data are the base items for the database. It
+contains records which most other records depend on. Usually
+modifiying or deleting any of these records will bring around
+global changes in the database since most records are dependant
+on these base items. Elementary Data consists of:
+     Telephone Telephone Numbers
+     Group Page Labels
+     Controller Group Labels
+     ECBU Magazine Labels
+
+     Controller Group Configuration contains items that relate
+to the Command Terminal and its Controller. This inludes defining
+the controller, configuring the Command Terminal etc. Controller
+Group Configuration consists of:
+     Called Party (Controller)
+     Command Terminal Configuration
+     Command Terminal Grouping
+     Controller Passwords
+     AMBA (Batch Conferences)
+
+     Line Assignment defines the passive and active line
+assignments for the controller and/or the controllers group. Line
+Assignment consists of:
+ 
+     Passive Line Assignments
+     Outgoing Party Line Parties
+     Active Assignment Labels 
+     Primary Active Assignments
+     Secondary Active Assignments
+     Party Line Active Assignments
+     Selcall Line Active Assignments
+
+
+     System Configuration defines of information on a system
+level. System Configuration consists of:
+
+     PABX Configuration
+     Service Personal Passwords
+     Report Configuration
+
+
+A brief summary of each function is as follows:
+
+Telephone Numbers
+     Defines a telephone number, its characteristics, and its
+associated key label.
+
+Group Page Labels
+     Defines the key label for the Group Page keys.
+
+Controller Group Labels
+     Defines a label or descriptive term for a controller group.
+
+ECBU Magazine Labels
+     IAN
+
+Called Party (Controller)
+     Defines Controller groups associated to the called number
+(normal, priority or emergency number).
+
+Command Terminal Configuration
+     Define the information specific for each Command Terminal
+such as its extension number etc.
+
+Command Terminal Grouping
+     Assign a set of Command Terminals to a controller group.
+
+Controller Passwords
+     Define a controller and his/her default settings.
+
+AMBA (Batch Conferences)
+     Sets up Group Conference information for each controller.
+
+Passive Line Assignments:
+     Sets up the Passive Line Assignments for each Group Page by
+allowing positioning of Telephone Number key labels.
+
+Outgoing Party Line Parties
+     Associates code numbers with a number defined in Telephone
+Numbers which has been described as a Party Line.
+
+Active Assignment Labels
+     Set up a key label for each controller depending how many
+controllers are in telephony for that controller group.
+
+Primary Active Assignments
+     Define a set of extension numbers as the Active Assignment
+for a controller group
+
+Secondary Active Assignments
+     Given the Active Assignments set up in Primary Active
+Assignments, allows you to select which controller within a group
+is to receive which assignment depending how many controllers are
+in telephony for this controller group.
+
+Party Line Active Assignments
+     Defines information for outgoing calls to each party on
+party lines.
+
+Selcall Line Active Assignments
+     IAN
+
+PABX Configuration
+     Sets up the values used by the PABX. This option is defined
+once at system installation.
+
+Service Personal Passwords
+     Define a controller who is designated as Service Personal
+and his/her default settings.
+
+Report Configuration
+     Allows you to set various parameters that are to be reported
+when a Download Configuration is requested.
+
+
+2.4. Database Screens
+
+This sections shows the screens associated with each item in the
+database menu.
+
+Telephone Numbers
+     <insert screens here >
+
+Group Page Labels
+     <insert screens here >
+
+Controller Group Labels
+     <insert screens here >
+
+ECBU Magazine Labels
+     <insert screens here >
+
+Called Party (Controller)
+     <insert screens here >
+
+Command Terminal Configuration
+
+Command Terminal Grouping
+
+Controller Passwords
+
+AMBA (Batch Conferences)
+
+Passive Line Assignments:
+
+Outgoing Party Line Parties
+
+Active Assignment Labels
+
+Primary Active Assignments
+
+Secondary Active Assignments
+
+Party Line Active Assignments
+
+Selcall Line Active Assignments
+
+PABX Configuration
+
+Service Personal Passwords
+Report Configuration
+
+
+
+2.5  Manipulating Records in the Database
+
+Following is a list of procedures for manipulating records within
+each database screen. The screens will be listed following their
+functions and which key performs that function in brackets '( )'.
+
+The following procedures relate to all the forementioned screens
+with the exception of Passive Line Assignmens, Primary Active
+Assignments and Secondary Active Assignments, These are discussed
+in the next section.
+
+     Telephone Numbers
+     Group Page Labels
+     Controller Group Labels
+     ECBU Magazine Labels
+     Called Party (Controller)
+     Command Terminal Configuration
+     Command Terminal Grouping
+     Controller Passwords
+     AMBA (Batch Conferences)
+     Outgoing Party Line Parties
+     Active Assignment Labels
+     Party Line Active Assignments
+     Selcall Line Active Assignments
+     PABX Configuration
+     Service Personal Passwords
+     Report Configuration
+
+Add a record             (Add key)
+Adds the current screen to the database (this will create a new
+record), If the record on screen is an existing record, and no
+changes to the record have occurred, the error message "Duplicate
+Record" is displayed.
+
+Modify a record          (Mod key)
+Modifies the current record in the database. For Modify to work,
+you must have first used one of the view database commands to
+bring an existing record up on the screen.
+
+Delete a record          (Del key)
+Deletes the current record from the database. The next record of
+this type will be automatically displayed. If the record deleted
+is the last record for this screen, then a informational message
+"End of File" is displayed.
+
+First Record             (Beginning key)
+Moves to the first record of this type in the file and displays
+this record. 
+
+Last Record              (End key)
+Moves to the last record of this type in the file and displays
+this record.
+
+Next Record              (Next key)
+Moves to the next record of this type in the file and displays
+this record. 
+
+Previous Record          (Previous key)
+Moves to the previous record of this type in the file and
+displays this record. 
+
+Exit Screen              (Esc key)
+Exits the current screen and returns to the main menu, This
+options applies to all screens.
+
+SPECIAL NOTE:
+
+Saving is not automatic.  You must add or modify a record if you
+want your changes written to the database.  Note that any command
+that deals with movement (next, previous, end or beginning) will
+forfeit any changes you may have made to a screen if you had not
+used add or modify.
+
+Telephone Numbers has a search feature, which will allow you to
+quickly move to a specific record. You can search for the first
+letter in the Target Description by pressing ALT-(search key).
+For example, if you wished to get the first record where the
+target description starts with an 'S', press ALT-S.
+
+Passive Line Assignments Screen
+
+The cursor for this screen is represented by a highlighted box.
+Use the cursor keys to move the box.  Saving of assignments is
+done automatically.  See screen below:
+
+
+
+Add an assignment        (Add key)
+Brings up a selection list of Telephone Number labels. The
+selected label is added to the current cursor position.
+
+Add an assignment        (Alternate Add key)
+Brings up a selection list of Command Terminal Number labels. The
+selected label is added to the current cursor position.
+
+Insert an assignment page     (Shift Add key)
+Brings up a selection list of defined group pages.  The line
+assignments for the selected page are copied into the current
+page.
+
+Modify an assignment     (Mod key)
+Brings up a selection list of extension number labels. The
+selected label will overwrite the existing label at the current
+cursor position.
+
+Move an assignment  (Move key)
+Allows you to move the label at the current cursor position to
+a new position. The label may be moved to another page, but not
+to another Group Page. When moving, the Move key will change
+colour to signify you are now in move mode. Use the cursor keys
+and Next and Previous Page keys to move the cursor to the desired
+new location. Press the Move key again and the label will be
+moved. Note that you cannot move a label on top of another label.
+
+Go To Line Page1         (Beginning key)
+Displays the first line page for this group page.
+
+Go To Line Page 5        (End key)
+Displays the last line page for this group page.
+
+Previous Page       (Previous key)
+Displays the previous page for this group page.
+
+Next Page           (Next key)
+Displays the Next page for this group page.
+
+Select a Group Page (Group key)
+Displays a selection list from which a group page can be
+selected.
+
+Delete an Assignment Page     (Shift Del key)
+Clears the current page of all assignments.
+
+Primary Active Assignments Screen
+
+This screen displays a list of labels for all the Telephone
+Numbers defined.  Telephone Numbers which are Active assignments
+for this controller group will be marked with a '*' and be a
+different colour.  The space bar acts as a toggle in selecting
+Telephone Numbers as active assignments for the current
+controller group. The list of Telephone Nmbers might be more than
+is possible to display on the screen. If applicable, use the
+PageUp and PageDn keys to access further Telephone Numbers. See
+selection lists for how to use movement keys.
+
+
+
+Save Assignments              (Save key)
+Saves the Active assignments for the current controller group to
+the database. Note that saving is NOT automatic. If you don't
+save, your changes won't be saved.
+
+Select a Controller Group          (Group key)
+Displays a selection list from which a controller page can be
+selected.
+
+View Active Assignments       (View key)
+Brings up a window showing just the extensions assigned for this
+controller group, rather than all extension numbers. Once in this
+window, you may use the movement keys as defined under selection
+lists. Press the Esc key to exit this window.
+
+Secondary Active Assignments Screen.
+
+This screen displays at any one time, 5 configurations of active
+assignments for a given number of controllers in telephony mode
+for the selected controller group.  On the left of the window is
+a list of Telephone Numbers chosen for this group from Primary
+Active Assignments.  Across the right are the 5 configurations
+labelled 1 to 5. Within each configuration there are 10 rows,
+representing a maximum of 10 operators in telephony mode for any
+given controller group. Controller 1 to Controller 10 is
+represented by column 1 to 10 for each configuration. Only as
+many columns as controllers in telephony mode will be accessible
+for editing. Use the cursor keys to move around the screen.
+
+The space bar acts as a toggle in selecting assignments for
+controllers; an 'X' denotes that the extension is assigned to
+that particular controller. If applicable, use the PageUp and
+PageDn keys to access further Telephone Numbers.
+
+
+
+Save Assignments         (Save key)
+Saves the Active assignments for the current controller group to
+the database. Note that saving is not automatic. Only the CURRENT
+configuration is saved, you must save when moving from one
+configuration to another.
+
+Increase Controllers in Telephony Mode  (End key)
+Redisplays the screen with an additional number of controllers
+in telephony mode.  For example if the current screen is for 2
+controllers in telephony mode, choosing this option will
+redisplay the screen for 3 controllers in telephony mode. Note
+the maximum number of controllers in telephony mode is the number
+of controllers assigned to this Controller Group from the Command
+Terminal Grouping screen.
+
+Decrease Controllers in Telephony Mode  (Beginning key)
+Displays the screen with 1 less controller in telephony mode.
+Note the mininum controllers in telephony mode is 2. (1 operator
+in telephony mode will always have all assignments so input is
+not needed).
+
+Go to Next Configuration      (Next key)
+Jumps to the next configuration for this screen. Note: save the
+current configuration before moving between configurations as the
+save option only saves the current configuration, not  all 5
+configurations.
+
+Go to Previous Configuration  (Previous key)
+Jumps to the previous configuration for this screen.
+
+Select a Controller Group          (Group key)
+Displays a selection list from which another controller group can
+be selected.
+
+SPECIAL NOTE FOR ALL SCREENS:
+
+With Add and Modify, the screen acted on will be re-read from
+disk. This gives a visual confirmation that the record just added
+or modified was indeed added or modified.
+
+With movement commands (next record, end of file etc), the order
+of movement is based on the most important field for that screen.
+For example, if viewing Telephone Numbers, it will be ordered on
+its label in alphabetical order.
+
+2.6. Moving within a Database Screen
+
+This section refers to all screens except Passive Line
+Assignments, Primary Active Assignments and Secondary Active
+Assignments.
+
+Database screens consist of a number of fields requiring entry.
+The current field where the cursor is located will be highlighted
+in a different colour. To move within a field, use the cursor
+left and right keys. To move to the next field, use the cursor
+down or Enter key. To move up a field, use the cursor up key.
+Field editing keys consist of the Backspace (deletes a character
+to the left of the cursor) and Delete (deletes the character
+under the cursor).
+
+
+2.7. Selection Lists
+
+Any field within a database screen marked with a '*' means that
+entry for this field is via a selection list. A selection list
+is a pop-up window which allows you to view all possible
+selections. To pop-up the selection list, press the Enter key.
+Use the cursor keys to move up or down the list. Pressing Enter
+to make a selection. Press Esc to cancel selection. For large
+lists use the PageUp, PageDn keys to scroll up/down a page at a
+time.  Pressing Home will take you to the first item in the list,
+End to the last. first letter selection is also available, this
+means pressing a letter on the keyboard will move the cursor to
+the first item in the list with the same letter.
+
+
+2.8  Field and Screen Validation
+
+Field validation consists of 2 simple types, alphabetical and
+numeric.
+Validation is done on a key by key basis. Thus for a numeric
+field, pressing a alphabetic key will be ignored.
+
+Screen validation is performed when Add or Modify is selected and
+consists of checking whether all fields requiring data contain
+data. If this is not the case, an error will result and the
+offending field will be highlighted; allowing you to enter data
+before trying an Add or Modify again.
+
+
+2.9  Downloading the Configuration
+
+Choose Download Configuration from the Database Management Menu.
+This will download all the data in the database to the CT's.
+Choose this option when you wish the Command Terminals to operate
+under any new changes you have made to the database. 
+
+On selecting this entry, no intervention is necessary, a screen
+display will give you a progress report  on the downloading.
+
+If you have selected any of the report options under Report
+Configuration, then a report will be generated.
+
+Once the download has been initiated each Command Terminal  will
+copy the data files to their local hard drives, the outcome of
+this operation is displayed in the download window.
+
+When all the Command Terminals have been processed a confirming
+message box will appear, if any Command Terminals have failed to
+copy the files successfully a warning message will be given,
+otherwise the download can be completed by responding 'Y' at the
+prompt or aborted by typing 'N'.
+
+SPECIAL NOTES:
+
+Before commencing a download of new data it is essential that all
+the Command Terminals are known to the SMT. 
+
+This can be established by choosing the Command Terminal
+Maintenance menu option at the System Management menu level then
+the LAN Status option and finally the Active Users option. The
+resulting table displays the Command Terminals known to the
+system and whether they are logged on or off, etc. Check
+carefully that all the CT's from SRA_CT_4401 to SRA_CT_4415 are
+recorded, should any be missing it is suggested that each
+terminal be P.I.N.ed on again before the download is started or
+be made to log an unknown caller to the SMT printer. This should
+re-attach the terminal to the Local Area Network.
+
+NB: Any CT's not recorded in this list may not successfully copy
+the new data files !!
+
+It is expected that downloading files may require some time to
+perform.  A bar display on the screen will indicate the progress
+of downloading.
+
+
+2.9.A.  Data Passive Regression
+
+Selecting this option enable the system to revert to the previous
+version of data (refer to the LAN Server Terminal for the current
+data version). A message window will appear asking for
+confirmation of the request, respond 'Y' to continue or 'N' to
+abort the operation. After responsing 'Yes' to the this menu the
+system will automatically restart in about two minutes and will
+be running under the previous version of data.
+
+SPECIAL NOTES:
+
+Be careful, once the regression has been started it cannot be
+aborted !!
+
+
+2.10 Getting Help
+
+General help is available in the help menu. Use the cursor to
+select the help topic you desire and press the Enter key. 
+
+The help screen might contain more information that can be
+displayed within the window; use the cursor keys and the PageUp
+and PageDn keys to move through the text.
+Many of the screens of the System Management Terminal contain
+specific help. To obtain specific help press the Alt and F1 keys
+on the field on which help is required.
+
+Press the Esc key to exit help.
+
+
+2.11 Passwords
+
+When first starting the program, you will be prompted to enter
+the access password before proceeding. You cannot proceed until
+this is done. 
+
+To provide protection of data when the SMT is unattended for a
+period of 10 minutes, the screen will be blanked and a access
+password window will appear. Access to the program will be denied
+until the correct password is entered. Once the correct password
+is entered, the screen will be restored to its prior state.
+
+2.12.     Data Relationships
+
+Many of the database screens within the SMT have a data
+dependancy with other database screens.  Therefore, in order to
+add records of a certain type, it is necessary that other records
+must exist on which the new records are dependant. Normally, all
+the database records under Elementary Data under the Database
+Maintenance Menu should be entered first, as most of the other
+records will depend on these base items in one way or another.
+
+For example, you cannot add any Passive Line Assignments until
+you have defined records for Telephone Numbers and Group Page
+Labels.  Some records are not dependant on other records.  These
+'elementary' base records include Group Page Labels, Telephone
+Numbers, ECBU Magazine Labels and Controller Group Labels.
+  
+z.   APPENDIX
+
+z.1      Database Status
+
+        The file status of the database can be monitored by the small
+        coloured boxes at the upper left of the screen. Each of these
+        boxes represent a file within the database and are (from left
+        to right)
+
+	Group Page Labels
+	Telephone Numbers
+	Passive Line Assignments
+	Called Party (Controller)
+	Primary Active Assignments
+	Secondary Active Assignments
+	Command Terminal Grouping
+	PABX Configuration
+	Command Terminal Configuration
+	AMBA (Batch Conferences)
+	Controller Passwords
+	Controller Group Labels
+	Active Assignment Labels
+	Party Line Active Assignments
+	Selcall Line Active Assignments
+	Outgoing Party Line Parties
+	ECBU Magazine Labels
+	Service Personnel Passwords
+	Report Configuration
+	Internal Index File
+	Internal Index File
+	Internal Index File
+	Internal Index File
+	Internal Index File
+	Internal Index File
+
+        The status of these boxes is as follows:
+
+        No box - the file is closed and not being accessed
+        Yellow box - the file is open, but not currently being accessed
+        Black box with 'R' - the file is open, and is currently being accessed
+        Black box with 'W' - the file is open, and is currently being written to
+
+        Whilst in one of the menus, no boxes should be visible. The SMT
+        will flush the database to disk at this point if you have just finished
+        some data entry. If any boxes show a file still open, it indicates
+        an error, and the program should be terminated and restarted.
+
+z.2      Error and Informational Messages
+
+        A description of all the error and informational messages that may
+        appear at the bottom of the screen whilst in the SMT follows:
+
+<Beginning of file>                                             (information)
+        The beginning of the file has been reached.
+<End of file>                                                   (information)
+        The end of the file has been reached.
+<Duplicate Record>                                              (error)
+        An attempt has been made to add a record which has a key
+        which matches an existing record. The record is not added.
+<No Active Assignments>                                         (error)
+        No primary assignments have been made for this controller group.
+        Assign primary assignments before trying this option again.
+<No Command Terminals for this Controller Group>                (error)
+        This controller group has no Command Terminals assigned to it.
+        This options is not needed for an un-assigned controller group.
+        You may assign terminals under Command Terminal Grouping.
+<This Controller Group needs no secondary assignments>          (information)
+        This controller group has 1 Command Terminal assigned to it,
+        and therefore needs no secondary assignments as this COmmand
+        Terminal will receive all active assignments.
+<Valid pages are in the range ( 1 to 5 )>                       (information)
+        There is 5 line pages under passive assignments. They are 
+        numbered from 1 to 5 inclusive.
+<Can't modify a record that doesnt exist!>                      (error)
+        An attempt has been made to modify a blank line key under
+        passive assignments. Only assigned line keys can be modified.
+<NO records have been defined yet>                              (information)
+        This will occur when a choice list is selected and no records
+        of this type exist or all records of this type have already been
+        assigned.
+<Record already exists. Use Modify>                             (error)
+        An attempt has been made to add an assigned line key under
+        passive assignments. Use modify to change this line key.
+<Incomplete form - record not written>                          (error)
+        An attempt has been made to add a record in which not all
+        the mandatory fields contain data. The field which requires
+        data will be highlighted.
+<NO Extension Numbers have been defined>                        (error)
+        This will occur when you try to add telephone numbers while in
+        passive or active assignments. Telephone numbers must exist to
+        use these options.
+<NO Controller Groups have been defined>                        (error)
+        An attempt has been made to enter Active Assignments before
+        any controller groups have been defined.
+<NO Group Pages have been defined>                              (error)
+        An attempt has been made to enter Passive Assignments before
+        any Group Page Labels groups have been defined.
+<NO Extension Numbers have been selected>                       (information)
+        This occurs when View is selected in Primary Active Assignments
+        when no telephone numbers have been selected as active.
+<A record of this type already exists>                          (error)
+        An attempt has been made to add a record when only record
+        of this type is permitted. This applies to PABX configuration
+        and Report Configuration.
+<Maximum number of assignments (250) exceeded>                  (error)
+        An attempt has been made to add more than the maximum number
+        of assignments of telephone numbers in Primary Assignments
+<Pages can be added to blank pages only>                        (error)
+        Copying a page of line keys in Passive Line Assignments can
+        only be performed on a page with no line keys assigned to it.
+<Limit of 16 assignments per single party line exceeded>        (error)
+        There is a maximum limit of 16 telephone number assignments
+        for any one Outoing Party Line.
+<This Monitor No: has already been defined>                     (error)
+        The Monitor Number entered already exists as the Monitor
+        Number of another Command Terminal.
+<Code can only be 3 or 6 digits for omnibus type>               (error)
+        This field can contain only the digits '3' or '6'
+<Integrity check FAILED>                                        (error)
+        One of the integrity tests performed when requesting a
+        download configuration has failed. See the screen or report
+        for more details.
+<P.I.N. check FAILED. More P.I.N. 's required (see list above)> (error)
+        There are more Command Terminals defined then P.I.N's. Add more
+        P.I.N's so there is as many or more then the number of
+        defined command terminals.
+<Controller Labels check FAILED. See list above>                (error)
+        Not all Controller Labels have been defined for all combinations
+        of controllers in telephony and configuration number for a
+        specific controller group.
+<Max. Queue extension must be greater than Min. Queue extension> (error)
+        The maximum queue extension number must be greater then
+        the mininum  queue extension number in PABX configuration
+<Automatic Answer Delay time must be a number from 1 to 9>      (error)
+        The value for Automatic Answer Delay in PABX configuration
+        must be a number from 1 to 9
+<All the terminals defined have been assigned to a Controller Group> (information)
+        This will occur when a choice list of command terminals is 
+        selected and all the command terminals have already been
+        assigned to a controller group.
+<The mininum of 2 controllers in telephony been reached>        (information)
+        This will occur when you are in Secondary Active Assignments and
+        you try to decrease the number of controllers in telephony and
+        you are already at the mininum number allowed.
+<The maximum number of controllers in telephony has been reached> (information)
+        This will occur when you are in Secondary Active Assignments and
+        you try to increase the number of controllers in telephony and
+        you are already at the maximum number allowed as defined in
+        command terminal grouping.
+<Download Configuration ABORTED by user request>                (information)
+        The Download Configuration was aborted by the user.
+<No Controller Label defined for this configuration>
+        A Controller Labels has not been defined for this number
+        of controllers in telephony and configuration number for a
+        specific controller group.
+<Call numbers must be unique>                                   (errer)
+        Standard, Priority and Emergency Numbers must be unique numbers.
+<No terminals have been assigned to this group>                 (error)
+        No Command Terminals for the current controller group have
+        been defined.
+<This P.I.N. already appears in Controller Passwords>           (error)
+        The Service personal PIN must be unique, and must not conflict
+        with a PIN defined in Controller Passwords
+<This record is used critically elsewhere. Deletion aborted>    (error)
+        The request to delete a record has been denied as information
+        in this record has a critical reference to another record. You
+        must delete all releted records first before a delete request
+        will be allowed
+<No Command Terminals have been defined>                        (error)
+        This will occur when a choice list of command terminals is 
+        selected and no command terminals have been defined
+<This P.I.N. already appears in Service Personnel Passwords>    (error)
+        The Controller Password PIN must be unique, and must not conflict
+        with a PIN defined in Service Personel
+<UNKNOWN DATABASE ERROR>                                        (severe error)
+        A read or write operation to the database has produced an
+        unexpected condition. Proceeding with any operations after
+        this point will seriosly impede the integrity of the database.
+        It is strongly recommended after getting this error to exit
+        the program and restart it.
+
+
+
+
+

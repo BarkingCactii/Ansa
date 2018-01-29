@@ -1,0 +1,2052 @@
+
+SRA  TRAIN  CONTROL  COMMAND  COMMUNICATION  SYSTEM
+
+
+TECHNICAL REFERENCE MANUAL
+
+
+SMT MAINTENANCE AND ROUTINE TEST
+
+
+1.   INTRODUCTION
+1.1. General
+1.2. Command Terminal Overview
+1.3. System Management Terminal Overview
+1.4. LAN Server Overview
+
+2.   COMMAND TERMINAL FUNCTIONS
+2.1. Log File Analysis
+2.2. The Status Icons
+2.3. Data File Download
+
+3.   SYSTEM MANAGEMENT FUNCTIONS
+3.1. Getting Started - The Password
+3.2. The SMT Menu
+3.3. System Management
+3.3.1.    Database and Maintenance
+3.3.1.1.  Database Management
+3.3.1.2.  System Maintenance
+3.3.1.3.  Other Options
+3.3.2.    Changing the Password
+3.4. Floppy Disk
+3.5. Tape Management
+3.5.1.    Partial Back up
+3.5.2.    Full Back up
+3.5.3.    SY-TOS Tape Operating System
+3.5.4.    Delete Old Files
+3.6. LAN Management
+3.6.1     General LAN Functions
+3.6.2     Network Server
+3.6.3.    Set System Time and Date
+
+3.7. Log Off
+
+4.   SYSTEM MAGEMENT TERMINAL MAINTENANCE OPERATIONS
+4.1. Introduction
+
+4.2. Viewing System Log Files
+4.2.1     View Daily CT  Communication Log
+4.2.2     View Daily CT  Maintenance Log
+4.2.3     View Daily CT  Call Status Log
+4.2.4     View Daily SMT Maintenance Log
+4.2.5     View Daily LST Communication Log
+4.2.6     View Daily LST Maintenance Log
+4.2.7     View Weekly Communication Logs
+4.2.8     View Weekly Maintenance Logs
+4.2.9     View Weekly Call Status Log
+
+
+4.3  Print System Log Files
+
+
+4.4. Hardware Tests
+
+4.4.1     Audio Conference Bridge
+4.4.2     Extended Conference Bridge
+4.4.3     ICU Combiner Driver
+4.4.4     Alternate Combiner Driver
+4.4.5     File(s) Open
+4.4.6     Memory Allocation
+4.4.7     View CTWS Hardware Status
+4.4.8     Print CTWS Hardware Status
+4.4.9     Lan Server Tests
+4.4.10    System Management Tests
+
+
+
+4.5. Network Status
+4.5.1.    Active CTWS Users
+4.5.2.    Printer Activity
+4.5.3.    Devices Attached
+
+APPENDIX A     Communication Error Codes
+
+APPENDIX B     Maintenance Error Codes
+
+APPENDIX C     Call Log Status Codes
+
+
+1.   INTRODUCTION
+
+1.1. General
+
+This manual describes the maintenance functions available on the
+Command Terminals and the System Management Terminal. 
+The maintenance of the system comprises of three main areas:
+
+     (i)  Command Terminal internal diagnostics
+     (ii) LAN Server backups and
+     (iii)     System Management Terminal Maintenance
+
+
+1.2. Command Terminal Overview
+
+On each Command Terminal, three log files are kept for analysis
+by the maintenance technician.  They are as follows:-
+
+     (a)  A general Maintenance log.
+     (b)  A Communications log for logging communications status
+of the equipment attached to the Command Terminals.
+     (c)  A Call Status log file which keeps a record of calls
+abandoned before answer and waiting time to answer for successful
+calls.
+
+The software running on each Command Terminal (CT) monitors for
+any unusual or erronous conditions. All errors occurring on the
+CT are logged to the general Maintenance log. Wherever possible
+the CT will attempt to recover from the erronous condition. 
+However there are given situations that require the maintenance
+technician to attend to something on the system. A printed report
+on the LAN Server printer will notifiy the maintenance
+techniciona of any problems.
+
+
+1.3. System Management Terminal Overview
+
+The System Management Terminal (SMT), allows the technician to
+interrogate the system and gain information about the current
+configuration and status of the installation.  The operational
+status of each Command Terminal can be seen at a glance and
+individual Command Terminal logs can be viewed.
+
+It is also possible to initiate manual tests on the system from
+this terminal.  Tape back-up functions are performed from the
+SMT. All LAN Server operations and configurations are available
+through the SMT.
+
+
+1.4. LAN Server Overview
+
+The LAN Server (LS), does not have any user interface.  The
+software is running at all times and there should be no
+interference from the user.  The only exception to this rule
+would be for a complete reboot of the LAN in the event of a fatal
+error in the LAN network.  All other operations involving the LS
+are available from the System Management Terminal.
+
+
+
+2.   COMMAND  TERMINAL FUNCTIONS
+
+2.1. Log File Analysis
+
+Analysis of the log files will require a fairly intimate
+knowledge of the system.  Please refer to the system
+documentation.  The log files have different formats as detailed
+in Appendix A, B and C.
+
+In analysing a fault for a Command Terminal or it's equipment all
+three logs should firstly be viewed or printed (see Chapter 4). 
+The call log will give a clear indication of the last calls
+processed through the system and the time taken to answer these
+calls. Examine these for any abnormalities first (e.g., many
+calls waiting too long, many calls not answered etc.) Secondly
+consult the maintenance log to see if any internal errors have
+been detected.  This information together with the communications
+log and status table log will narrow down the source of the
+problem.  The next step is to examine LED indications on the
+system equipment, please see other sections in the Fault Locating
+Manual.
+
+
+2.2. The Status Icons
+
+The Status Icons at the bottom of the screen on the Command
+Terminal represent various hardware items connected to the
+Command Terminal.  These icons have three states as follows:-
+
+     GREEN          Equipment is operational and online.
+     YELLOW         Equipment is operational but offline
+(suspected faulty).
+     RED            Equipment has failed.
+
+There are 8 icons from  left to right:-
+
+     LAN
+     Audio Equipment
+     ICU
+     Emergency LIM
+     Conference Bridge
+     Touch Screen
+     Transfer Assignments     (No error state indicated)
+     Headset / Loudspeaker    (No error state indicated)
+
+
+2.3. Data File Download
+
+When the SMT has created new data files they are copied to the
+LS and all CT's are notified that new files are to be copied. 
+All SMT functions are restricted during the download to the CT's. 
+Normal operations cannot recommence until the new data has been
+successfully copied to all Command Terminals.
+
+The process may be interrupted by pressing any key during this
+operation in which you may abort.
+
+Once the new data files have been created, the files are then
+copied to the LAN Server and the progress indicated by a bar
+graph representing the percentage of files copied.
+
+When all on-line (functional) Command Terminals have completed
+the copy process you will notified whether to activate the new
+system data files (just copied).  Once this has been confirmed
+the system will re-start in approximately two minutes and will
+be running on new data.
+
+Refer to the System Management Terminal User Manual, Section x.9
+for further information.
+
+
+3.   SYSTEM MANAGEMENT FUNCTIONS
+
+3.1. Getting Started - The Password
+
+When the system starts, the operator will be prompted to enter
+the password for the SMT, see figure 1.  At the time of shipping
+this password will be set to "SMT". Simply hit the letters
+'S','M','T' and 'ENTER' on the keyboard and the System Management
+Terminal main menu will appear, see figure 2.  For changing the
+password, see section 3.3.2, "Changing the Password".
+
+(insert figure 1 here)
+
+Figure 1.
+
+3.2. The System Management Terminal Main Menu
+
+(insert figure 2 here)
+
+Figure 2.
+
+By using the arrow keys the user may now select the desired
+operation. The options are broken down into four areas as
+follows:-
+
+     -    System Management
+     -    Floppy Disk
+     -    Tape Management
+     -    LAN Management
+     -    Log Off
+
+
+3.3. System Management
+
+This section is designed to assist the maintenance technician in
+diagnosing problems within the system and changing the database
+that the Command Terminals use.  It also allows the user to
+change the password required to gain access to restricted
+operations. 
+
+
+
+3.3.1.    Database and Maintenance
+
+Choosing this option will bring you to the System Management menu
+as in figure 3.
+
+
+
+
+(insert figure 3)
+Figure 3.
+
+3.3.1.1.  Database Management
+
+This option involves entering and maintaining the database the
+system uses. For more information on this option see the System
+Management Terminal User Manual.
+
+
+3.3.2.    Changing the Password 
+
+To change the password for the software the current password must
+be known.  The password screen (figure 4.) prompts for the old
+password to be entered.  For reasons of system security the
+letters typed will not be known.  Commit the password to memory
+as it will always be required to gain access to the system.
+
+
+
+
+
+
+
+
+
+
+
+
+(insert figure 4 here)
+Figure 4.
+
+
+3.4. Floppy Disk
+
+(insert figure 5 here)
+Figure 5.
+
+This option allows weekly log files to be copied to floppy disk.
+There are four choices at this menu (figure 5),
+
+     Copying a Data Communications Log to Floppy
+     Copying a Maintenance Log to Floppy
+     Copying a Call Status Log to Floppy
+     Copying All the Week's Logs to Floppy
+
+
+Use the cursor keys to highlight the log you wish to copy and
+press Enter. A message will appear prompting the insertion of a
+1.2 MByte disk into the floppy drive, press (Enter) to continue
+or (ESCape) to abort the operation. See Figure 81.
+
+
+(insert figure 81 here)
+Figure 81.
+
+
+There will now be a list of that type of log files present on the
+system. See Figure 80 for an example list. Using the up and down
+arrow keys select the appropriate log file option, then press
+(Enter), The selected log file will now be copied to floppy disk.
+
+
+(insert figure 80 here)
+
+Figure 80. (Example of log file list)
+
+
+
+3.5. Tape Management
+
+This section handles backup of the system.  If "Tape Management"
+is selected from the menu, the Tape Management menu will appear,
+see figure 6.
+
+
+
+(insert figure 6 here)
+
+Figure 6.
+
+Selecting any one of these options will prompt you to insert a
+tape. (see figure 82) At this point, insert a tape and press
+Enter.
+
+
+(insert figure 82 here)
+Figure 82,
+
+3.5.1.    Partial Back up
+
+A partial backup will backup the SMT data and LAN Server data
+files.  This procedure should be executed daily. The tapes should
+be circulated so that the "oldest" tape is used for the next
+backup.  The tapes should be labelled the day that they are to
+be used.
+
+3.5.2.    Full Backup
+
+A full backup will backup both the LAN Server and SMT hard
+drives. This procedure should be executed weekly. This procedure
+may take up to twenty minutes to perform and no user input will
+be required after the procedure has started.
+
+3.5.3.    SY-TOS Tape Operating System
+
+The SY-TOS Operating system can be used as an interact with the
+tape backup operating system.  The screen will appear as in
+figure 7. 
+
+(insert figure 7 here)
+Figure 7.
+
+3.5.4.    Delete Old Files
+
+This option purges the LAN Server and SMT of all log files and
+temporary files. This should be performed periodically as log
+files will tend to become very large over a period of time.
+Before the files are deleted, you will be reminded to have a tape
+backup copy before proceeding. See figure 83.
+
+(insert figure 83 here)
+Figure 83.
+
+SPECIAL NOTE:
+
+It is advisable that a backup to tape be make prior to deleting
+old files as a security measure.
+
+3.6. LAN Management
+
+This option is chosen by selecting LAN managment from the Main
+Menu. The LAN Management menu is show in figure 8.
+
+(insert figure 8 here)
+Figure 8.
+
+3.6.1.    General LAN Functions
+
+This option will show the LANTASTIC's screen as in figure 9.  The
+most common use of this screen will be to add a new account to
+the system for the addition of new Command Terminals in the
+future.  This is done via the following procedure:-
+
+Choose "User Account Management".  This will display a list of
+current users as in figure 10.
+
+(insert figure 9 here)
+Figure 9.
+
+
+(insert figure 10 here)
+Figure 10.
+
+Press the 'Ins' key to add a new user to the group.  The screen
+in figure 11, will appear.
+
+
+(insert figure 11 here)
+Figure 11.
+
+The new user name should be entered as USER_??? where ??? is the
+PIN number for the user.  In the example described in the
+following, the name USER_NEW has been used.  After entering the
+new user name, the user password is entered.  In the example the
+password is the same as the PIN.  A user description will then
+be requested.  This LANTASTIC option is not used so if desired
+enter the workstation position (eg. West Control) or simply hit
+ENTER. The screen of figure 12, should now be displayed.
+
+
+(insert figure 12)
+Figure 12.
+
+Users are allowed one login only, this is the default so simply
+press ENTER. The new user name will then appear at the bottom of
+the current user list and be high lighted. Now use the arrow keys
+to highlight the user name and press ENTER, a screen similar to
+figure 13 will appear.
+
+
+(insert figure 13 here)
+Figure 13.
+
+The new entry will have no information stored in the Privileges
+field, to change this information use the arrow keys to select
+the Privileges field (a grey bar highlights the current entry).
+Now press the letters 'A', 'Q', 'M' and 'U', as this is done the
+Privileges field should change accordingly, when editing of this
+information is completed, press ESC to return to the previous
+menu.  Hit ESC again to return to the main menu. For further
+information, please refer to LANTASTIC Manual.
+
+
+3.6.2.    Network Server
+Please refer to Lantastic User Manual for NET use.
+
+3.6.4.    Set System Time and Date
+
+The screen appears showing current system time and date. (see
+figure 84)  Use cursor arrows to move to an modify time and date. 
+To update press ENTER, to exit without saving time press ESCape.
+
+(insert figure 84 here)
+Figure 84.
+
+3.7. Log Off
+
+Use this option to log off. (see figure 85) The screen of figure
+1, will reappear.
+
+(insert figure 85 here)
+Figure 85.
+
+The second option 'Exit to DOS' allows the appropriate technical
+people to return to the DOS operating system. To start the SMT
+software make sure the current DOS directory is C:\SMTWS> (using
+the "CD \SMT" command), then type "SMT" at the DOS prompt and
+press ENTER, the SMT software will then start up displaying the
+above screen.
+
+SPECIAL NOTE:
+
+Caution should be exercised before choosing the "Exit to DOS"
+menu option.
+
+
+4.   COMMAND TERMINAL MAINTENANCE OPERATIONS
+
+4.1. Introduction
+
+When logged on to the SMT, the maintenance functions can be
+accessed by selecting Database and Maintenance from the main menu
+followed by "Command Terminal Maintenance".  This will bring the
+user to the Command Terminal Maintenance menu.  The menu is
+broken down into four main areas (see figure 86 for screen):-
+
+     -    Viewing
+     -    Printing
+     -    Manual Test
+     -    LAN functions
+
+
+(insert figure 86 here)
+Figure 86.
+
+This main menu screen will open out into various sub-menus and
+the user simply uses the arrow keys to traverse the items
+contained within each menu. The User can revert to the previous
+menu by pressing the ESCape key.
+
+The user is informed of what is currently being done via pop-up
+message windows, for example if a file is being copied etc. 
+Again, any of these processes can be interrupted or aborted by
+pressing the keyboard.
+
+
+4.2. View System Log Files
+
+
+
+The view option allows the user to see the contents of a file or 
+table before printing it. (see figure 87)
+
+
+(insert figure 87 here)
+Figure 87
+
+4.2.1     View Daily CT  Communication Log
+
+The communications log is a detailed account of errors and
+messages encountered during the normal process of Command
+Terminal communication with the equipment it is attached to for
+the current day only. It details online/offline changes,
+transmission errors, number of retries etc.  The exact error
+codes and messages can be found in Appendix A.
+
+4.2.2     View Daily CT  Maintenance Log
+
+This log contains information regarding program failures and
+device errors for the current day only.  In the unlikely event
+that the software fails the maintenance log will record why it
+failed.  Serious errors should be reported to the technical
+manager at ANSA Pty Ltd.
+
+4.2.3     View Daily CT  Call Status Log
+
+The call log records information regarding calls that time out
+and the length of time before calls are answered for the current
+day only..
+
+4.2.4     View Daily SMT Maintenance Log
+
+This log contains information regarding program failures and
+device errors for the SMT for the current day only..  In the
+unlikely event that the software fails the maintenance log will
+record why it failed.  Serious errors should be reported to the
+technical manager at ANSA Pty Ltd.
+
+4.2.5     View Daily LST Communication Log
+
+The communications log is a detailed account of errors and
+messages encountered during the normal process of Lan Server
+communication with the equipment it is attached to for the
+current day only. It details online/offline changes, transmission
+errors, number of retries etc.  The exact error codes and
+messages can be found in Appendix A.
+
+4.2.6     View Daily LST Maintenance Log
+
+This log contains information regarding program failures and
+device errors on the Lan Server for the current week.  In the
+unlikely event that the software fails the maintenance log will
+record why it failed.  Serious errors should be reported to the
+technical manager at ANSA Pty Ltd.
+
+4.2.7     View Weekly Communication Logs
+
+The communications log is a detailed account of errors and
+messages encountered during the normal process of CT, LS and SMT
+communication with the equipment it is attached to for the
+current week. It details online/offline changes, transmission
+errors, number of retries etc.  The exact error codes and
+messages can be found in Appendix A.
+
+4.2.8     View Weekly Maintenance Logs
+
+This log contains information regarding program failures and
+device errors for the current week only for the CT, SMT and LS. 
+In the unlikely event that the software fails the maintenance log
+will record why it failed.  Serious errors should be reported to
+the technical manager at ANSA Pty Ltd.
+
+4.2.9     View Weekly Call Status Log
+
+The third log file kept by each Command Terminal is the call log. 
+The call log records information regarding calls that time out
+and the length of time before calls are answered for the current
+week.
+
+
+
+4.3. Print System Log Files
+
+There are two printers attached to the system.  The System
+Management Terminal has a printer attached for printing the log
+files and other diagnostics reports.  The other printer is
+attached to the LAN Server and is mainly used for printing
+Wordprocessor files. The print options are identical to the View
+options detailed in Section 4.2 except the logs are printed
+instead of displayed to screen. (see figure 90)
+
+
+(insert figure 90 here)
+Figure 90.
+
+4.4. Hardware Tests 
+
+Selecting any of the following options should bring up a list of
+users on the system. If no list appears and the user hears a
+"beep" sound this indicates the LAN Server is not responding. The
+system will continue to "beep" until such time as the LAN Server
+is restored to an operational state.
+
+If the server responds then a list of users on the system will
+appear. The CT under test will appear in blinking text. If  no
+heartbeat is received within the timeout period then the CT will
+appear in red with a null symbol beside it. If a heartbeat is
+received then it will appear in blue with a  beside it. When all
+tests have been completed there will be no blinking text on the
+screen. The display will pause until another key is pressed and
+then return to the menu.
+
+4.4.1     Audio Conference Bridge
+
+This test will determine whether the connection to the Audio
+Interface is intact and that the Audio interface is responding
+to the message. As above each CT will appear in a list and the
+test status for each Command Terminal will appear as described
+above.
+
+4.4.2     Extended Conference Bridge
+
+This test will determine whether the connection to the Conference
+Equipment is intact and the Conference Equipment is responding
+to the message. As above each CT will appear in a list and the
+test status for each Command Terminal will appear as described
+above.
+
+4.4.3     ICU Combiner Driver
+
+This test will determine whether the connection to the ICU
+Combiner Driver is intact and the ICU is responding to the
+message. As above each CT will appear in a list and the test
+status for each Command Terminal will appear as described above.
+
+4.4.4     Alternate Combiner Driver
+
+This test will determine whether the connection to the Emergency
+ICU Combiner/Driver is intact and the ICU is responding to the
+message.  As above each CT will appear in a list and the test
+status for each Command Terminal will appear as described above.
+
+4.4.5     File(s) Open
+
+This option requests each CT to log its current number of open
+files to its Maintenance log. The log file can then be requested
+and the information viewed. This information is only relevant to
+software technicians.
+
+4.4.6     Memory Allocation
+
+This option requests each CT to log its current run-time memory
+usage to its Maintenance log. The log file can then be requested
+and the information viewed. This information is only relevant to
+software technicians.
+
+
+4.4.7     View CTWS Hardware Status
+
+
+Select View CTWS Hardware Status from the Hardware test menu to
+perform this test. (see figure 88) This table represents the
+status of all PCB boards that each Command Terminal is connected
+to. The Command Terminals obtain a status of the equipment
+through the routine heartbeat messages. This status is then
+reported to the SMT when a request to view the system status
+table is made. 
+The table represents the status of the system at the time of the
+request. It does not dynamically change with the system. If you
+require a new request for status information to be made then you
+may hit the Function key 1 (F1) to update the table.
+
+A '' means that the board is operational and online.
+A 'x'  means that the board is not responding or is offline.
+
+The purpose of this screen is to quickly identify which board is
+in error. The diagnosis should be made by a person with good
+technical knowledge of the system.  It is important to know which
+Command Terminals are connected to which conference bridge for
+instance.  If a fault is detected on a Command Terminal with
+respect to the conference equipment then the system management
+terminal can be used to quickly diagnose the problem.  If for
+example the status screen showed that only one of the four
+Command Terminals using a particular conference equipment had
+problems, the datalink to the Command Terminal is probably
+faulty.
+
+figure 88.
+
+
+
+
+(insert figure 88 here)
+Figure 88.
+
+4.4.8     Print CTWS Hardware Status
+
+This option allows the current Command Terminal hardware status
+report to be printed.
+
+4.4.9     Lan Server Tests
+
+This option requests the LST to test its hardware and software.
+The ICU Combiner/Driver, Alternate (LIM) Combiner/Driver, and
+Message Distribution Channel (MDU) are all tested, memory usage
+and open file handles are logged to its Maintenance log. The log
+file can then be requested and the information viewed.
+
+4.4.10    System Management Tests
+
+This option requests the SMT to test its hardware and software.
+The Message Distribution Channel (MDU) is tested, and memory
+usage and open file handles are logged to its Maintenance log.
+The log file can then be requested and the information viewed.
+
+
+4.5. Network Status
+     
+Network status is available from the Network status choice in the
+Routine Maintenace Menu. The menu for Network status is:
+
+
+(insert figure 92 here)
+
+4.5.1.    Active CTWS Users
+
+This option will display which machines are currently attached
+to the LAN network and the identification of the user's PIN on
+the machine, figure 14. If there is no user logged onto the
+Command Terminal the PIN will appear as LOGGED OFF. Otherwise the
+PIN will appear as the current users pin on number.
+
+
+(insert figure 14 here)
+Figure 14.
+
+4.5.2.    Printer Activity 
+
+The LAN provides a printer spooler for buffering printer activity
+to the printer attached to the LAN Server.  This option will
+display the current status of the printer and show which entries
+have been spooled. (see figure 89)  For more information on a
+particular entry simply select the entry by using the arrow keys
+and press enter.  This will show a screen which gives a detailed
+analysis of the printer spooler entry.  The field have the
+following  meanings:-
+
+User:     the user who made the spool entry,
+Date:     the date the spool entry was created,
+Time:     the time the spool entry was created, and
+Status:   what stage the spooled file is being processed.
+
+4.5.3.    Devices Attached
+
+This option will display a screen showing all the logical devices
+attached to the LAN network including logical drives and
+printers. The display will appear similar to figure 15, below.
+
+
+(insert figure 15 here)
+Figure 15.
+
+
+APPENDIX A.    COMMUNICATION ERROR CODES
+
+The communication errors are broken down into four groups and
+each group has a base error number as follows:
+
+     AUDIO               100
+     ICU                 200
+     LIM                 300
+     CONF           400
+
+The following error codes are relative to one of the base numbers
+above. That is error code 203 indicates that a checksum error (3)
+occurred on the ICU equipment (200).
+
+The communications error log records errors and statistical
+information relating to the system's data communications.  This
+information is grouped into five general areas and can be
+identified (by category) as follows:
+
+     GENERAL COMMS  -    000 (to 049)
+     MAINTENANCE         -    050 (to 099)
+     AUDIO EQUIPMENT     -    100
+     ICU EQUIPMENT       -    200
+     LIM EQUIPMENT       -    300
+     CONF EQUIPMENT -    400
+     MDU EQUIPMENT  -    500
+
+Each PC maintains their own daily communication file.  These
+files have the following NEC DOS naming convention:
+
+     for Command Terminals    -    DD00000C.LOG,
+     for LAN Server      -    DD_LST_C.LOG, and
+     for the SMT              -    DD_SMT_C.LOG,
+
+where 'DD' indicates the day of the week, '00000' identifies a
+Command Terminal (by telephone number), and 'C' signifies the
+communications log.
+
+These files are stored locally at each machine (for the day that
+they are current) in the DOS subdirectory C:\LOGS and are
+archived to the Server (subdirectory E:\WKS_LOGS) at the end of
+that day (midnight).
+
+Each day's log file has the following general format, 
+
+     file header record,
+     error/statistical information .....
+     file footer record,
+     an example of this format is presented below.
+
+FR04415C.LOG Log File Started @ 00:00:12 on . . . .
+
+     Various error details
+          "    "
+          "    "
+          "    "
+          "    "
+
+
+
+Log File Stopped @ HH:MM:SS on . . . .
+
+Should the log file be temporarily closed during the course of
+a day, either being requested by the SMT or due to excessive
+error logging, then a "Log file re-started" message will be
+inserted.
+
+The errors will be tabulated:
+
+DATE, TIME
+ERROR PARTY
+NUM
+STATUS
+TX/RX BUFFER
+
+
+where:-
+i)   Date, Time is the time at which the error was reported.
+ii)  Error Party is the equipment in error.
+iii) Num is the error code as listed below.
+iv)  Status is the Machine Status code as described above (if
+applicable).
+v)   TX/RX Buffer holds the message (if any) that was received.
+
+Summarized below are the errors that can be recorded in the
+communications log file.  Each enter in the table contains the
+primitive error number (ranging from 00..49), the type of error
+or information, and a brief description.  See appendix B for
+details on maintenance errors that may appear in this log.
+
+Err
+No.
+Error Type
+Description of Error
+
+0
+NO_ERROR
+no error has occurred
+
+1
+COMS_ERROR
+reason will be in the status bits
+
+2
+LENGTH_ERROR
+message incorrect length
+
+3
+INVALID_DIGIT
+unknown digit encountered in dial number
+
+Err
+No.
+Error Type
+Description of Error
+
+4
+CHECKSUM_ERROR
+message has checksum error
+
+5
+UNEXPECTED_START
+the message started at an unexpected point
+
+6
+INVALID_SEND_COMMAND
+bug in program, trying to send undefined command
+
+7
+UNKNOWN_LENGTH_ERROR
+don't know the correct length of message
+
+8
+RECEIVE_TIMEOUT
+the command sent will be in the status bits
+9
+UNKNOWN_MESSAGE_ERROR
+never heard of this message
+
+10
+IS_ONLINE
+the equipment has come online
+
+11
+IS_OFFLINE
+the equipment has gone offline
+
+12
+HAS_BEEN_RESET
+power on reset at the equipment
+
+13
+EQUIPMENT_FAILURE
+could not establish any comms with interface
+
+14
+ERROR_IN_CONFIG
+field format error
+
+15
+BUFFER_OVERFLOW
+receive/transmit buffer overflowed
+
+16
+BUFFER_UNDERFLOW
+circular buffer underflowed
+
+17
+UNEXPECTED_MESSAGE
+unexpected input rx message
+
+18
+UNABLE_TO_OPEN_CONFIG
+file open error
+
+19
+UNABLE_TO_CLOSE_CONFIG
+file close error
+
+20
+DIGI_DEVICE_DRIVER_
+MISSING
+could not locate device driver in ram
+
+21
+ICU_CONNECTED_WRONG
+the ICU equipment is connected to this port
+
+22
+LIM_CONNECTED_WRONG
+the LIM equipment is connected to this port
+
+23
+MDU_CONNECTED_WRONG
+the MDU equipment is connected to the wrong port
+
+24
+CANNOT_SEND_COMMAND
+unable to issue command through ICU or LIM (both off-line)
+
+25
+BAD_PORT_ADDRESS
+could not interpret the emergency LIM C port address
+
+26
+PORT_OUT_OF_RANGE
+emergency LIM port address not within range
+
+27
+BAD_C_LAST_NUMBER
+ICU module could not interpret c_last_number in config file
+
+28
+CALL_MISMATCH
+ICU number did not match CPI on outgoing call
+
+29
+ANSWER_MISMATCH
+ICU number answered did not match CPI number dialled
+
+30
+LCD_COMMAND_ERROR
+unrecognised audio screen command
+
+31
+LCD_ADDRESS_ERROR
+decoded the audio LCD_COMMAND but LCD address is crook
+
+32
+TOO_MANY_RETRIES
+comms (e.g., to TAU) is faulty
+
+33
+TERMINAL_ID_MISMATCH
+command terminal phone number does not match MD number
+33
+TERMINAL_ID_MISMATCH
+command terminal phone number does not match MD number
+
+34
+ID_INCORRECT
+TAU id does not match the expected id
+
+35
+FIRMWARE_INCORRECT
+TAU firmware does not match the expected id
+
+
+
+
+
+36
+CALL_Q_LANQ_REPLY
+call history from server arrived
+
+37
+CALL_Q_REPLY_TIMEOUT
+call history from server time-out
+
+38
+CALL_Q_LATE_REPLY
+unexpected/late call history reply
+
+39
+UNABLE_TO_OPEN_Q
+error opening call q on LAN server
+
+40
+UNABLE_TO_READ_Q
+error reading call q on LAN server
+
+
+
+
+
+Err
+No.
+Error Type
+Description of Error
+
+41
+CONF_CONNECTED_WRONG
+the conf equipment is connected to this port
+
+42
+BAD_NUMBER_OF_CIRCUITS
+conf allocate circuits out of range, number in status bits
+
+43
+WRONG_PORT_RELEASED
+conf equipment has sent wrong port address when CT cleared out
+of conference
+
+44
+WRONG_PORT_ANSWERED
+conf equipment has sent wrong port address when CT dialled into
+conf
+
+45
+UNEXPECTED_PORT_
+ANSWER
+we got an answer from the conf bridge and we hadn't dialled it
+
+46
+UNEXPECTED_PORT_CLEAR
+we got a clear from the conf when we hadn't issued a clear down
+
+47
+TLU_PORT_ERROR
+conf sent us a TLU error
+
+
+Consider an error 211 that has been logged to the day's file. 
+The first digit '2' denotes an Audio equipment error and the
+remaining two digits '11' indicates that the equipment is
+off-line.
+
+The following status bits represent primary communication errors.
+They are used to identify the type of AUDIO_COMS_ERROR or
+ICU_COMS_ERROR
+Note:     bit 0 is reserved ( ignore ).
+
+Error Description
+Error Code (Hex)
+Internal Meaning
+
+
+
+
+
+OVERRUN_ERROR
+0x002
+bit 1 is set
+
+PARITY_ERROR
+0x004
+bit 2 is set
+
+FRAMING_ERROR
+0x008
+bit 3 is set
+
+
+
+bit 4 is reserved
+
+
+
+bit 5 is reserved
+
+
+
+bit 6 is reserved
+
+TIME_OUT_ERROR
+0x80
+bit 7 is set
+
+INTERRUPT_BUFFER_OVERFLOW
+0x100
+bit 8 is set
+
+
+
+APPENDIX B.    MAINTENANCE ERROR CODES
+
+The maintenance log contains information and errors that relate
+to the general operation of the particular system, be it the
+Command Terminal, LAN Server or System Management Terminal.
+
+Each PC maintains their own daily maintenance file. These files
+have the following NEC DOS naming convention:
+
+     for Command Terminals    -    DD00000M.LOG,
+     for LAN Server      -    DD_LST_M.LOG, and
+     for the SMT              -    DD_SMT_M.LOG,
+
+where 'DD' indicates the day of the week, '00000' identifies a
+Command Terminal (by telephone number), and 'M' signifies the
+maintenance log.
+
+These files are stored locally at each machine (for the day that
+they are current) in the DOS subdirectory C:\LOGS and are
+archived to the Server (subdirectory E:\WKS_LOGS) at the end of
+that day (midnight).
+
+Each day's log file has the following general format,
+
+     file header record,
+     error/statistical information .....
+     file footer record,
+
+an example of this format is presented below.
+
+WE04403M.LOG Log File Started @ 00:00:22 on . . . .
+
+     Various error details
+          "    "
+          "    "
+
+
+
+Log File Stopped @ HH:MM:SS on . . . .
+
+Should the log file be temporarily closed during the course of
+a day, either being requested by the SMT or due to excessive
+error logging, then a "log file re-started" message will be
+inserted.
+
+Information recorded to this log appears in the following format;
+
+Date, Time
+Code
+Status
+Message
+
+. . . . . .
+     . . . . . .
+076
+220
+ERROR
+SERIOUS
+Some message
+Another message
+
+where the code relates to a unique error code, status indicates
+the severity of the error (eg. SERIOUS, just a REPORT, etc) and
+some brief description.
+
+Summarized below are the errors that can be recorded in the log
+file. Each enter in the table contains the error number, the type
+of error or information, and a brief description.
+
+
+Err
+No.
+Error Type
+Description of Error
+
+50
+LOG_FILE_CLOSE
+failed to close log file
+
+51
+LOG_FILE_OPEN
+failed to open log file
+
+52
+LOG_FILE_CREATE
+failed to create log file
+
+53
+LOG_FILE_SEEK
+log file seek error
+
+54
+LOG_FILE_WRITE
+log file write error
+
+55
+LOG_FILE_REQUESTED
+log file requested report
+
+56
+QUEUED_LIMIT_ERROR
+copy queue buffer overflow
+
+57
+DEQUEUE_RANGE_ERROR
+copy queue buffer underflow
+
+58
+TOO_MANY_ERRORS
+too many errors record
+
+59
+HARD_DISK_FULL_ERROR
+hard disk free space is low
+
+60
+DIR_COPIED_OK_REPORT
+copying of Server directory successful
+
+61
+DIR_COPY_ABORT_REPORT
+copying of Server directory aborted
+
+62
+DIR_COPY_STOP_REPORT
+copying of directory stopped
+
+63
+SVR_VER_MISMATCH_
+ERROR
+Server data and version mismatch
+
+64
+SVR_VER_MATCHED_
+REPORT
+Server data and version matched
+
+65
+NO_SVR_VER_FILE_ERROR
+Server data version file missing
+
+66
+NO_DATA_AT_SVR_REPORT
+no CT data at Server yet
+
+67
+EMPTY_WORK_DIR_REPORT
+work directory at Server was empty
+
+68
+DATA_DOWNLOAD_REPORT
+report download started
+
+69
+SYSTEM_REBOOT_REPORT
+report system about to re-boot
+
+79
+FILE_STATUS_REPORT
+number of file handles report
+
+70
+LCL_VER_MISMATCH_
+ERROR
+local data version mismatch
+
+71
+LCL_VER_MATCH_REPORT
+local data version matched at CT
+
+72
+NO-LCL_VER_FILE_REPORT
+no data version file at CT found
+
+73
+TEST_STARTED_REPORT
+Test Request from SMT
+74
+INVALID_TEST_REPORT
+Invalid test request from SMT
+
+75
+TEST_ABORTED_REPORT
+Abort test request from SMT
+
+76
+TEST_NOT_POSSIBLE
+Invalid test request from SMT
+
+77
+TEST_TIMEDOUT_REPORT
+Test requested timed out
+
+78
+TEST_FINISHED_REPORT
+Test requested has finished
+
+93
+CT_ENVIRON_NAME_ERROR
+CTNAME environ var not set
+
+Err
+No.
+Error Type
+Description of Error
+
+80
+LIST_DELETE_ERROR
+call to delete not matched
+
+81
+BUILD_RANGE_ERROR
+value outside of case range
+
+82
+HISTORY_REQ_REPORT
+call history request received
+
+83
+HISTORY_SEND_REPORT
+call history sent to CT report
+
+84
+LIST_VER_MATCH_REPORT
+LAN Server data version match
+
+85
+LAN_C_PARTY_ICU_ERROR
+ICU C party number out of range
+
+90
+SMT_GENERAL_REPORT
+general SMT report category
+
+91
+USER_ABORT_DOWNLOAD
+user aborts download @ SMT
+
+92
+ABORT_DOWNLOAD_ERROR
+system abort of SMT download
+
+100
+HEAP_ALLOC_ERROR
+failed to allocate dynamic heap
+
+101
+HEAP_DEALLOC_ERROR
+failed to deallocate list node
+
+102
+MEMORY_STATUS_REPORT
+memory allocation report function
+
+103
+EMS_INSTALL_ERROR
+expanded memory not found
+
+104
+EMS_ALLOC_ERROR
+failed to allocate EHS memory
+
+105
+EMS_HANDLE_ERROR
+checkEMS( ) failed
+
+110
+FILE_OPEN_ERROR
+file did not open successfully
+
+111
+FILE_READ_ERROR
+file read failure
+
+112
+FILE_SEEK_ERROR
+file seek failure
+
+113
+FILE_CLOSE_ERROR
+file close failure
+
+114
+FILE_WRITE_ERROR
+file write failure
+
+115
+FILE_UNLINK_ERROR
+file deletion failure
+
+116
+FILE_CREATE_ERROR
+file creation error
+117
+FILE_HDR_READ_ERROR
+file header record read failure
+
+118
+FILE_ACCESS_ERROR
+file access denied/failed
+
+119
+FILE_APPEND_ERROR
+file open in append mode failed
+
+120
+LAN_ONLINE_STATUS
+online/offline status
+
+121
+LAN_INVALID_SETUP
+LAN setup for computer incorrect
+
+122
+LAN_NO_HEARTBEAT
+failed to receive heartbeat
+
+123
+LAN_NO_REQ_HEARTBEAT
+failed to receive heartbeat request
+
+124
+PRINT_Q_ERROR
+problems with printer
+
+125
+LAN_UNKNOWN_MSG
+received an unknown message
+
+126
+SMT_MISSING_ERROR
+system management terminal missing
+
+127
+LAN_CRITICAL_ERROR
+critical error has occurred
+
+128
+LAN_OTHER_ERROR
+miscellaneous LAN error
+
+130
+TOUCHSCR_ONLINE_STATUS
+online/offline status
+
+131
+TOUCHSCR_INVALID_SETUP
+touchscreen setup for PC incorrect
+
+132
+TOUCHGSCR_CMD_FAILED
+execution of command failed
+
+133
+TOUCHSCR_CMD_TIMEOUT
+execution of command timed out
+
+134
+TOUCHSCR_INPUT_ERROR
+error in input stream
+
+135
+TOUCHSCR_OTHER_ERROR
+miscellaneous touchscreen error
+
+136
+GENERAL_USER_ERROR
+general screen and user error
+
+137
+GENERAL_EQUIP_ERROR
+general equipment error
+
+138
+CRITICAL_USER_ERROR
+critical screen and user error
+
+139
+CRITICAL_EQUIP_ERROR
+critical equipment error
+
+140
+DIR_RANGE_ERROR
+initiate directory case out of range error
+
+141
+DIR_ENTRY_ERROR
+initiate directory invalid entry found
+
+142
+DIR_C_TYPE_ERROR
+directory entry has invalid line type
+
+143
+DIR_IDX_RANGE_ERROR
+directory idx out of range error
+
+144
+DIR_DATA_ENTRY_ERROR
+parse on directory entry failed
+
+Err
+No.
+Error Type
+Description of Error
+
+145
+DIR_ACTION_RANGE_ERROR
+directory action loop switch error
+146
+ASSIGN_HDR_REC_ERROR
+number of telephony op's exceeds file rec
+
+147
+UNEXPECTED_ENTRY_ERROR
+unexpected real-time entry ptr
+
+148
+UNEXPECTED_EXIT_ERROR
+unexpected real-time exit ptr
+
+149
+UNEXPECTED_DIVT_ERROR
+unexpected real-time divert ptr
+
+150
+CONF_TYPE_ERROR
+invalid conference type error
+
+151
+GRP_CONF_MEMB_ERROR
+number group conference members range error
+
+152
+CONF_IDX_RANGE_ERROR
+conference panel idx out of range error
+
+153
+CONF_PARTY_CLR_ERROR
+party reported clear not matched
+
+154
+CONF_PARTY_ANS_ERROR
+party reported answered not matched
+
+155
+CONF_OUR_PORT_ERROR
+equipment answered out port - not us
+
+156
+CONF_CIRCUITS_NA_ERROR
+equipment reported circuits unavailable
+
+157
+CONF_MEMBER_FAIL_ERROR
+failed to add member to conference
+
+158
+CONF_FAIL_TO_DROP_ERROR
+equipment did not respond to request
+
+159
+CONF_FAIL_DTMF_ERROR
+audio equipment did not respond DTMF
+
+160
+CONF_FAIL_CLEAR_ERROR
+equipment failed to respond clear
+
+161
+CONF_FAIL_REPLY_ERROR
+conference equipment did not respond at all
+
+162
+CONF_WRONG_DATA_ERROR
+sent wrong data to conference equipment
+
+163
+CONF_TLU_PORT_ERROR
+equipment reports faulty TLU port number
+
+164
+MONITOR_EMPTY_ERROR
+monitor empty - request clear
+
+165
+MONITOR_RANGE_ERROR
+monitor idx out of range error
+
+166
+MONITOR_CLEAR_ERROR
+monitor clear required when empty error
+
+167
+MONITOR_UNANSWERED_
+ERROR
+monitor circuit was not automatically answered
+
+168
+MONITOR_BUSY_ERROR
+monitor circuit should have been free
+
+169
+EMPTY_CHECK_BUSY_ERROR
+line target list - busy checked
+
+170
+LINE_KEY_TYPE_ERROR
+file entry has invalid line type
+
+171
+LINE_KEY_RANGE_ERROR
+line key button out of range
+
+172
+LINE_KEY_ATTR_ERROR
+line target has invalid attribute
+
+173
+LINE_RRN_RANGE_ERROR
+line key file rrn out of range
+
+174
+LINE_TARGET_MATCH_
+ERROR
+line target node not found for number
+
+175
+EMPTY_CLEAR_LINE_ERROR
+line target list on removal
+
+176
+EMPTY_RESET_LINE_ERROR
+on call target list - call clears
+
+177
+EMPTY_ANSA_LINE_ERROR
+line target list - call answered
+
+178
+EMPTY_BUSY_LINE_ERROR
+line target list - call now busy
+
+179
+EMPTY_CHECK_LINE_ERROR
+line target list - call checked
+
+180
+PARTY_LINE_MATCH_ERROR
+matching party line rec not found
+
+181
+OMNI_IDX_RANGE_ERROR
+panel button out of range error
+
+182
+EXCEPT_NOT_LOGGED_
+ERROR
+exception controller not in telephony
+
+183
+UNASSIGNED_ACTIVE_ERROR
+SMT terminal has not assigned all calls
+
+184
+FAILED_3RD_PIN_ERROR
+third attempted PIN entry invalid
+
+185
+USR_SESSION_RANGE_ERROR
+user session out of range error
+
+186
+INVALID_CALL_CNT_ERROR
+number phone calls on was invalid
+
+187
+DTMF_BUTTON_RANGE_
+ERROR
+DTMF button out of range error
+
+188
+LD_SPEECH_MODE_ERROR
+phone and AIU speak mode error
+
+Err
+No.
+Error Type
+Description of Error
+
+189
+PHONE_RECOVERY_REPORT
+phone recovery initiated report
+
+190
+USR_UNKNOWN_STATE_
+ERROR
+user current DFSM state unknown
+
+191
+USR_INVALID_STATE_ERROR
+user current DFSM state invalid
+
+192
+COM_UNKNOWN_STATE_
+ERROR
+communication current DFSM state unknown
+
+193
+COM_INVALID_STATE_ERROR
+communication current DFSM state invalid
+
+194
+LAN_UNKNOWN_STATE_
+ERROR
+LAN current DFSM state unknown
+
+195
+LAN_INVALID_STATE_ERROR
+LAN current DFSM state invalid
+
+196
+FX_BUFF_OVERFLOW_ERROR
+software error fx ptr buffer overflow
+
+197
+CALL_Q_RANGE_ERROR
+call q identifier out of range
+
+198
+Q_PANEL_RANGE_ERROR
+index into q panel out of range
+
+199
+MASTER_Q_RANGE_ERROR
+index into master q out of range
+
+
+
+APPENDIX C.    CALL LOG STATUS CODES
+
+The call status/waiting log contains call information related to
+an individual Command Terminal.
+
+Each CT maintains their own daily call status file.  This file
+has the following NEC DOS naming convention;
+
+     Command Terminal '00000' -    DD00000L.LOG
+
+where 'DD' indicates the day of the week, '00000' identifies a
+Command Terminal (by telephone number), and 'L' signifies the
+call waiting log.
+
+These files are stored locally at each machine (for the day that
+they are current) in the DOS subdirectory C:\LOGS and are
+archieved to the Server (subdirectory E:\WKS_LOGS) at the end of
+that day (ending at midnight).
+
+Each day's log file has the following general format,
+
+     file header record,
+
+     error/statistical information . . . .
+
+     file footer record,
+
+an example of this format is presented below.
+
+MO04401L.LOG Log File Started @ 00:00:22 on . . . .
+
+DATE, TIME
+CODE
+PARTY
+LABEL
+MESSAGE
+
+
+
+
+
+
+
+
+
+
+
+
+Log File Stopped @ HH:MM:SS on . . . .
+
+Each entry in the contains a time/date stamp, message code for
+the entry, party related to the entry, a display label (where
+applicable) and call message.
+
+
+The call status message codes are listed below.
+
+Code
+Message Type
+Description of Message
+
+
+
+
+200
+CONTROLLER_ENTRY_CODE
+recording new telephony operator
+
+201
+CONTROLLER_EXIT_CODE
+operator has exited telephony
+
+202
+CONTROLLER_CHGE_CODE
+operator has changed assignment
+
+
+
+
+
+203
+CALL_CLEARED_CODE
+call cleared before answered code
+
+204
+CALL_ANSWERED_CODE
+call answered code
+
+205
+CALL_OTHER_ANS_CODE
+another CT has answered this CT's call
+
+206
+CALL_DURATION_CODE
+duration of incoming or outgoing call
+
+207
+CONF_DURATION_CODE
+duration of manual or group conference
+
+208
+ASSIGNED_CALL_CODE
+report incoming call to this Cammand Terminal
+
+209
+UNASSIGNED_CALL_ERROR
+call not assigned to anyone
+
+
+
+
+
+210
+CALL_Q_STATUS_ERROR
+current call q status unknown
+
+211
+A_PARTY_IN_CALL_ERROR
+a party exists in call queue
+
+212
+C_PARTY_IN_CALL_ERROR
+c party exists in call queue
+
+213
+CLEAR_CALL_Q_ERROR
+cleared call not in any queue
+
+214
+EMPTY_BUSY_Q_ERROR
+answer queue was empty
+
+215
+CHECK_BUSY_Q_ERROR
+search on answer queue failed
+
+216
+FULL_BUSY_Q_ERROR
+answered call queue has no available recs left
+
+
+
+
+
+217
+INVALID_BUSY_Q_ERROR
+busy call queue total does not match real total
+
+218
+INVALID_RING_Q_ERROR
+ring call queue total does not match real total
+
+219
+INVALID_SWAP_Q_ERROR
+swap call queue total does not match real total
+
+220
+INVALID_MY_Q_ERROR
+my call queue total does not match real total
+
+
+
+
+
+221
+BUSY_VERIFY_REPLY_ERR
+unknown A party associated with verify reply
+
+222
+BUSY_RESEND_REPLY_ERR
+unexpected repeat CT clear down for A party
+
+223
+BUSY_CALL_CLEAR_ERROR
+answered call clear re-sent error
+
+224
+BUSY_RE_CLEARED_ERROR
+answered call clear missed error
+
+
+
+
+
+225
+CALL_DROPPED_ERROR
+expired call dropped - missed ICU stream
+
+
+The information contained in each log entry is dependent on the
+call status code. Listed below are the entry formats for these
+codes,
+
+     standard abbreviations used,
+
+     A party # number of called or calling party (eg. 92018),
+     B party # actual group hunt number dialled (eg. 70401),
+     C party # diversion point from where call is answered (eg.
+4501),
+     CT party #     a Command Terminal's phone number (eg. 4401).
+
+200  P.I.N.    user name Telephony CTs, configuration and 
+               assignment choice for the operator
+201  P.I.N.    user name exit message
+202            (same as entry for 200)
+
+203  C party # A party label  ring time before cleared, A party
+#
+204  C party # A party label  ring time before answer, A party
+#
+205  -    A party label  CT party, A party #
+206  CT party #     A party label  call time, A party #, call
+direction
+207  -    conference type     time operator connected to conf
+208  C party # A party label  assigned A party #, group #, CT #
+               within group, B party #,
+               (eg. A93044 G00 CT01 B70412,
+                    where 93044 has called 70412
+                    and has been assigned to the
+                    second operator of group one).
+209  C party # A party label  unassigned call (same as 208)
+
+210  -    -    status error message
+211  C party # A party label  duplicated A party #
+212  C party # A party label  associated duplicate A party #
+213  C party # -    message
+214  C party # A party label  message
+215  CT party #     -    A party #
+216  CT party #     A party label  message
+
+217  -    -    invalid total information
+218  -    -    invalid total information
+219  -    -    invalid total information
+220  -    -    invalid total information
+221  -    A party label  message
+222  CT party #     A party # message
+223  CT party #     A party # message
+224  CT party #     A party # message
+
+225  C party # A party label  time before cleared, A party #.
+
+                                                               
+                                                               
+         
+
+
+
+                                                               
+                                                               
+                                                               
+    
+
+
+
+
+

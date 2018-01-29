@@ -1,0 +1,129 @@
+ ##############################################################################
+##                                 MakeFile                                 ##
+##############################################################################
+
+.autodepend
+.silent
+.swap
+
+############################
+## Translator Definitions ##
+############################
+
+CC      = bcc
+CFG     = g:\4177.cfg
+TASM    = tasm
+DLIBR   = sm_dbase.lib
+TLINK   = tlink
+ADDLIBD = tlib $(DLIBR) @sm_dbase.rsp
+BUILT   = g:\built
+
+CFLAGS  =  -D_FM -Ff=100
+
+##################
+# Implicit Rules #
+##################
+
+.c.obj:
+        @echo -----------------------------------COMPILE------------------------------------
+        @echo $<
+        $(CC) +$(CFG) -c $(CFLAGS) { $< } >>err
+
+###############
+# List Macros #
+###############
+
+
+OBJS    =       actass.obj   \
+                ascii.obj    \
+                boxes.obj    \
+                b_party.obj  \
+                cleandir.obj \
+                chfunc.obj   \
+                commsys.obj  \
+                dbaccess.obj \
+                dbconfig.obj \
+                dbio.obj     \
+                dentry.obj   \
+                err.obj      \
+                file_mon.obj \
+                file_def.obj \
+                formdef.obj  \
+                forms.obj    \
+                g_active.obj \
+                g_assign.obj \
+                getidx.obj   \
+                groups.obj   \
+                grp_conf.obj \
+                grp_page.obj \
+                integrit.obj \
+                lineass.obj  \
+                line_key.obj \
+                linebox.obj  \
+                loaddb.obj   \
+                mapopgrp.obj \
+                menu_def.obj \
+                opartyln.obj \
+                party_ln.obj \
+                password.obj \
+                pop_menu.obj \
+                primass.obj  \
+                purge.obj    \
+                report.obj   \
+                sdb_data.obj \
+                t_matrix.obj \
+                technics.obj \
+                termcfg.obj  \
+                title.obj
+
+LIBS    =   sra_misc.lib sm_maint.lib sm_house.lib sm_share.lib \
+            sm_netwk.lib sm_dbase.lib gsfl.lib isaml.lib cbtl.lib
+
+EXE     =   smthouse
+
+##################
+# Explicit Rules #
+##################
+
+$(EXE) :     e
+        @echo -----------------------------------LINKING------------------------------------
+        @echo $(EXE)
+        $(TLINK) /x @&&| 
+c0l.obj
+$<
+		# no map file
+cl.lib+
+$(LIBS)
+|
+
+a :     $(EXE)
+
+b :
+        @echo ---------------------------------DELETE BAKS----------------------------------
+        del *.bak
+
+d :
+        @echo ---------------------------------DELETE ALL-----------------------------------
+        del *.bak
+        del *.OBJ
+        del *.exe
+
+c :     $(OBJS)
+
+e :     c
+        @echo -----------------------------------ADD LIB------------------------------------
+        @del $(DLIBR)
+        @$(ADDLIBD)
+        @copy $(DLIBR) $(BUILT)
+
+
+
+t1 :    $(OBJS) $(T1_OBJ)
+        @echo -----------------------------------LINKING------------------------------------
+        $(TLINK) /x @&&|
+c0l.OBJ $(OBJS) $(T1_OBJ)
+$<
+		# no map file
+cl.lib+
+|
+

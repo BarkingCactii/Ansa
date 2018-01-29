@@ -1,0 +1,279 @@
+figure 4
+ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
+º                                        º
+º     Enter Old Password  :              º
+º                                        º
+º     Enter New Password  :              º
+º                                        º
+º     Verify New Password :              º
+º                                        º
+ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
+
+figure 86
+ÚRoutine MaintenanceÄÄÄ¿
+³View System Log Files ³
+³Print System Log Files³
+³Hardware Tests        ³
+³Network Status        ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+figure 87                    
+ÚView System Log FilesÄÄÄÄÄÄÄÄÄÄÄ¿
+³View Daily CT  Communication Log³
+³View Daily CT  Maintenance Log  ³
+³View Daily CT  Call Status Log  ³
+³View Daily SMT Maintenance Log  ³
+³View Daily LST Communication Log³
+³View Daily LST Maintenance Log  ³
+³View Weekly Communication Logs  ³
+³View Weekly Maintenance Logs    ³
+³View Weekly Call Status Log     ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+ÚSelect CTWSÄÄÄÄ¿
+³SRA_CT_70002   ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+L 1       C 1     IA     201k     e:\tmp_logs\th_smt_m.log                      
+                                                                               
+ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+³       TH_SMT_M.LOG Log File Started     @ Thu Mar 25 00:00:52 1993            
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+³              Log File Stopped     @ Thu Mar 25 10:25:22 1993                  
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+                                                                               
+ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+³       TH_SMT_M.LOG Log File Started     @ Thu Mar 25 10:25:23 1993            
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ÚÄÄÄÄÄÄÄÄÂÄÄÄÄÂÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄ
+³  TIME  ³CODE³ STATUS ³DESCRIPTION                          DATED  25/03/93 ³FI
+ÃÄÄÄÄÄÄÄÄÅÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄ
+³10:25:24³0909³ REPORT ³Data ver 07 dir: [E:\DIR_1\] ok (Tue Mar 16 06:15:59)³di
+³10:25:24³0709³ REPORT ³LAN has been INITIALISED                             ³ne
+ÀÄÄÄÄÄÄÄÄÁÄÄÄÄÁÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄ
+ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+³              Log File Stopped     @ Thu Mar 25 10:25:27 1993                  
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+                                                                               
+ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+³       TH_SMT_M.LOG Log File Started     @ Thu Mar 25 10:40:34 1993            
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+Ú\WKS_LOGS\ÄÄ¿
+³TU_LST_C.LOG³
+³TU70002C.LOG³
+³WE_LST_C.LOG³
+³TH_LST_C.LOG³
+³TH70002C.LOG³
+³FR_LST_C.LOG³
+³SA_LST_C.LOG³
+³SU_LST_C.LOG³
+³WE70002C.LOG³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÙ
+Ú\WKS_LOGS\ÄÄ¿
+³TU70002S.LOG³
+³TH70002S.LOG³
+³WE70002S.LOG³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+figure 90
+ÚPrint System Log FilesÄÄÄÄÄÄÄÄÄÄÄ¿
+³Print Daily CT  Communication Log³
+³Print Daily CT  Maintenance Log  ³
+³Print Daily CT  Call Status Log  ³
+³Print Daily SMT Maintenance Log  ³
+³Print Daily LST Communication Log³
+³Print Daily LST Maintenance Log  ³
+³Print Weekly Communication Logs  ³
+³Print Weekly Maintenance Logs    ³
+³Print Weekly Call Status Log     ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+figure 91
+ÚHardware TestsÄÄÄÄÄÄÄÄÄÄÄÄ¿
+³Audio Conference Bridge   ³
+³Extended Conference Bridge³
+³ICU Combiner Driver       ³
+³Alternate Combiner Driver ³
+³File(s) Open              ³
+³Memory Allocation         ³
+³View CTWS Hardware Status ³
+³Print CTWS Hardware Status³
+³Lan Server Tests          ³
+³System Management Tests   ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+ÚAudio Conference BridgeÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+³                                            ³
+³  SRA_CT_70002                             ³
+³                                            ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+ÚExtended Conference BridgeÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+³                                            ³
+³  SRA_CT_70002                             ³
+³                                            ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+figure 88
+ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+³ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄ¿³
+³³ Terminal Name   ³ ACBU Status       ³ ECBU Status       ³ General  ³³
+³ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄ´³
+³³ SRA_CT_70002    ³ time-out occurred ³ time-out occurred ³ ???????- ³³
+³ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÙ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+ÚLan Server TestsÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+³                                                  ³
+³ X ICU 1 Combiner Driver  -  Test has timed out   ³
+³  ICU 2 Combiner Driver                          ³
+³   File Handles                                   ³
+³   Memory Allocation                              ³
+³   Server Status Word                             ³
+³                                                  ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+ÚSystem Management TestsÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+³                                            ³
+³ û File Handles       -  2 File(s) open     ³
+³ û Memory Allocation  -  2 Block(s)         ³
+³ û Smt Status Word    -  û  û  û            ³
+³                                            ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+figure 92
+ÚNetwork StatusÄÄÄ¿
+³Active CTWS Users³
+³Printer Activity ³
+³Devices Attached ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+figure 14
+ÚActive UsersÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+³ P.I.N      ³ Terminal Name   ³
+³ÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ³
+³ SMT        ³ SRA_CT_70002    ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+figure 89
+ÚPrinter ActivityÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+³                                ³
+³       Printer is idle !!       ³
+³                                ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+figure 15
+ÚAttached DevicesÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+³ Device ³ Server Path                ³
+³ÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ³
+³ E:     ³ \\E_THE_V_SERVER\SERVER_C  ³
+³ F:     ³ \\SRA_CT_70002\SERVER_C    ³
+³ G:     ³ \\E_THE_V_SERVER\VPR26     ³
+³ K:     ³ \\ANSA_SERVER\COMPILER     ³
+³ U:     ³ \\ANSA_SERVER\UTILITIES    ³
+³ PRN    ³ \\E_THE_V_SERVER\@PRINTER  ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+Figure 5
+Ú Copy Logs To DiskÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+³ Data Communications Log to Floppy ³
+³ Maintenance Log to Floppy         ³
+³ Call Status Log to Floppy         ³
+³ All the Week's Logs to Floppy     ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+Figure 80.
+Ú\WKS_LOGS\ÄÄ¿
+³TU_LST_C.LOG³
+³TU70002C.LOG³
+³WE_LST_C.LOG³
+³TH_LST_C.LOG³
+³TH70002C.LOG³
+³FR_LST_C.LOG³
+³SA_LST_C.LOG³
+³SU_LST_C.LOG³
+³WE70002C.LOG³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+Figure 81
+ÚMessagesÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+³ Insert a disk into the floppy disk ³
+³ drive and close the lever, press   ³
+³ Enter (ÄÄÙ) to continue or        ³
+³ ESC to abort                       ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+figure 6
+Ú Tape Backup Management¿
+³ Partial Backup        ³
+³ Full Backup           ³
+³ Tape Operating System ³
+³ Delete old files      ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+
+figure 82
+ÚNote:ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+³ Insert a tape into the tape     ³
+³ drive until it clicks and press ³
+³ Enter (ÄÄÙ) to continue or     ³
+³ ESC to abort                    ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+figure 83
+ÚNote:ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+³  !!!! WARNING !!!!!   ³
+³                       ³
+³ Files will be deleted ³
+³ make sure you have    ³
+³ a full back-up copy!  ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+figure 8
+Ú Lan ManagementÄÄÄÄÄÄÄÄÄ¿
+³ Network Server         ³
+³ General LAN Functions  ³
+³ Set System Time & Date ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+figure 9
+  LANtastic (R) Connection Manager V4.10       (C) Copyright 1991 Artisoft Inc. 
+ ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»                                         
+ ºMain Functions                      º                                         
+ ÌÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹                                         
+ ºNetwork Disk Drives and Printers    º                                         
+ ºPrinter Queue Management            º                                         
+ ºMail Services                       º                                         
+ ºChat With Another User              º                                         
+ ºLogin or Logout                     º                                         
+ ºUser Account Management             º                                         
+ ºMonitor & Manage Server Activity    º                                         
+ ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼                                         
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Enter-Select Option, Esc-Exit, F1-Help                                          
+
+
+
+figure 84
+ÉCurrent Time and DateÍÍÍÍ»
+º                         º
+º     Time : 13:33:18     º
+º                         º
+º     Date : 25/03/1993   º
+º                         º
+ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
+
+figure 85
+Ú ExitingÄÄÄÄÄ¿
+³ Log Off     ³
+³ Exit to DOS ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
